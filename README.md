@@ -4,4 +4,6 @@ An algorithm that aggregates and organizes collections of sentences based on sen
 Python 2.7.12+
 Notepad++/VIM
 
-
+Brian Reeder
+Derek Rogers
+Eddie Kinder
