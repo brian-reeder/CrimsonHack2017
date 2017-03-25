@@ -1,0 +1,7 @@
+What are my friends doing?
+They are struggling to rename a file
+They are struggling to commit changes to git
+They are my friends
+But what are they doing?
+
+- Brian JS Reeder
