@@ -1,266 +1,54 @@
-Python 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:42:59) [MSC v.1500 32 bit (Intel)] on win32
-Type "copyright", "credits" or "license()" for more information.
->>> 
- RESTART: C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py 
-dog poop trump
+article1 = 'dog poop trump great again'
+article2 = 'cat poop trump'
+testbool = False
+# This function will calculate a percent similarity between two articles
+# def Calculate_Percent_Similarity(article1,article2)
+def Are_Similar(article1,article2):
 
-Traceback (most recent call last):
-  File "C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py", line 12, in <module>
-    print words1[i]
-TypeError: list indices must be integers, not str
->>> 
- RESTART: C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py 
-dog poop trump
+    words1 = []
+    words2 = []
 
-Traceback (most recent call last):
-  File "C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py", line 11, in <module>
-    for i in len(words1):
-TypeError: 'int' object is not iterable
->>> 
- RESTART: C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py 
-dog poop trump
-dog
-poop
-trump
->>> 
- RESTART: C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py 
-0
->>> 
- RESTART: C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py 
-0
->>> 
- RESTART: C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py 
-['dog', 'poop', 'trump']
-[]
-0
->>> 
- RESTART: C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py 
-['dog', 'poop', 'trump']
-[]
-0
->>> 
- RESTART: C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py 
-['dog', 'poop', 'trump']
-['cat', 'poop', 'trump']
+    words1 = article1.split(" ")
+    words2 = article2.split(" ")
 
-Traceback (most recent call last):
-  File "C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py", line 33, in <module>
-    is_same = Tense_Sum(word1,word2)
-NameError: name 'word1' is not defined
->>> 
- RESTART: C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py 
-['dog', 'poop', 'trump']
-['cat', 'poop', 'trump']
+    is_same = False
+    points = 0
+    percent_similar = 0
+    threshold_percent = 30
 
-Traceback (most recent call last):
-  File "C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py", line 33, in <module>
-    is_same = Tense_Sum(words1,words2)
-  File "C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py", line 23, in Tense_Sum
-    if words1.find(str(words2))or words2.find(str(words1)):
-AttributeError: 'list' object has no attribute 'find'
->>> 
- RESTART: C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py 
-['dog', 'poop', 'trump']
-['cat', 'poop', 'trump']
+    if len(words1) > len(words2):
+        shortest_length = len(words2)
+    else:
+        shortest_length = len(words1)
 
-Traceback (most recent call last):
-  File "C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py", line 33, in <module>
-    is_same = Tense_Sum(words1[i],words2[j])
-TypeError: list indices must be integers, not str
->>> 
- RESTART: C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py 
-['dog', 'poop', 'trump']
-['cat', 'poop', 'trump']
+    print words1
+    print words2
 
-Traceback (most recent call last):
-  File "C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py", line 36, in <module>
-    is_same = Tense_Sum(words1[i],words2[j])
-TypeError: list indices must be integers, not str
->>> 
- RESTART: C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py 
-['dog', 'poop', 'trump']
-['cat', 'poop', 'trump']
+    def Tense_Sum(word1,word2):
+        if word1 == word2:
+            return True
+        if len(word1) >= 3 & len(word2) >= 3:
+            if word1 in word2 or word2 in word1:
+                print word1, word2
+                return True
+            else:
+                return False
+        else:
+            return False
+# The for loop below takes all the words in the articles and compares it 
+    for i in words1:
+        for j in words2:
+            is_same = Tense_Sum(i,j)
+            if is_same == True:
+                points += 1
 
-Traceback (most recent call last):
-  File "C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py", line 34, in <module>
-    if is_same == true:
-NameError: name 'true' is not defined
->>> 
- RESTART: C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py 
-['dog', 'poop', 'trump']
-['cat', 'poop', 'trump']
-heyy
-heyy
-heyy
-heyy
-heyy
-5
->>> 
- RESTART: C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py 
-['dog', 'poop', 'trump']
-['cat', 'poop', 'trump']
-dog
-cat
-dog
-poop
-dog
-trump
-poop
-cat
-poop
-poop
-poop
-trump
-trump
-cat
-trump
-poop
-trump
-trump
-5
->>> 
- RESTART: C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py 
-['dog', 'poop', 'trump']
-['cat', 'poop', 'trump']
-dog
-cat
-True
-dog
-poop
-dog
-trump
-poop
-cat
-True
-poop
-poop
-True
-poop
-trump
-trump
-cat
-True
-trump
-poop
-trump
-trump
-True
-5
->>> 
- RESTART: C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py 
-['dog', 'poop', 'trump']
-['cat', 'poop', 'trump']
-dog
-cat
-dog cat
-True
-dog
-poop
-dog
-trump
-poop
-cat
-poop cat
-True
-poop
-poop
-True
-poop
-trump
-trump
-cat
-trump cat
-True
-trump
-poop
-trump
-trump
-True
-5
->>> 
- RESTART: C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py 
-['dog', 'poop', 'trump']
-['cat', 'poop', 'trump']
-dog
-cat
-dog cat
-True
-dog
-poop
-dog
-trump
-poop
-cat
-poop cat
-True
-poop
-poop
-True
-poop
-trump
-trump
-cat
-trump cat
-True
-trump
-poop
-trump
-trump
-True
-5
->>> 
- RESTART: C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py 
-['dog', 'poop', 'trump']
-['cat', 'poop', 'trump']
-True
-True
-2
->>> 
- RESTART: C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py 
-['dog', 'poop', 'trump']
-['cat', 'poop', 'trump']
->>> 
- RESTART: C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py 
-['dog', 'poop', 'trump', 'great', 'again']
-['cat', 'poop', 'trump']
->>> 
- RESTART: C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py 
-['dog', 'poop', 'trump', 'great', 'again']
-['cat', 'poop', 'trump']
-3
->>> 
- RESTART: C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py 
-['dog', 'poop', 'trump', 'great', 'again']
-['cat', 'poop', 'trump']
-3
-0
->>> 
- RESTART: C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py 
-['dog', 'poop', 'trump', 'great', 'again']
-['cat', 'poop', 'trump']
-3
-2
-0
->>> 
- RESTART: C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py 
-['dog', 'poop', 'trump', 'great', 'again']
-['cat', 'poop', 'trump']
-3
-0
->>> 
- RESTART: C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py 
-['dog', 'poop', 'trump', 'great', 'again']
-['cat', 'poop', 'trump']
-3
-66
->>> 
- RESTART: C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py 
-['dog', 'poop', 'trump', 'great', 'again']
-['cat', 'poop', 'trump']
-these articles are similar
->>> 
- RESTART: C:/Users/chief/Desktop/CrimsonHack2017/Calculate_Percent_Similarity.py 
-['dog', 'poop', 'trump', 'great', 'again']
-['cat', 'poop', 'trump']
-True
->>> 
+    points *= 100
+    percent_similar = points / shortest_length
+
+    if percent_similar >= threshold_percent:
+        return True
+    else:
+        return False
+testbool = Are_Similar(article1,article2)
+print testbool
+
