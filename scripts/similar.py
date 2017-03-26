@@ -49,7 +49,7 @@ def pcnt_sim(article1,article2):
     # Award points for each hit
     for i in words1:
         for j in words2:
-            is_same = Tense_Sum(i,j)
+            is_same = Tense_Sim(i,j)
             if is_same == True:
                 points += 1
 
